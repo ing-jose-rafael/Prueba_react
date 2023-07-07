@@ -1,11 +1,12 @@
 import './App.css'
 import { ListOfCards } from './components/ListOfCards'
+import { Navbar } from './components/Navar'
 
 function App () {
   return (
     <div className='page'>
       <header>
-        <h1>Prueba técnica</h1>
+        <Navbar/>
       </header>
       <main>
         <ListOfCards/>
