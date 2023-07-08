@@ -1,5 +1,5 @@
 import './App.css'
-import { ListOfCards } from './components/ListOfCards'
+import { Outlet } from 'react-router-dom'
 import { Navbar } from './components/Navar'
 
 function App () {
@@ -9,7 +9,7 @@ function App () {
         <Navbar/>
       </header>
       <main>
-        <ListOfCards/>
+        <Outlet/>
       </main>
     </div>
   )
