@@ -10,7 +10,7 @@
   box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
   position: relative;
   width: 250px;
-  height: 380px;
+  height: 350px;
   /* background-color: rgb(101, 183, 241); */
   background-color: var(--clr);
   border-radius: 20px;
@@ -25,8 +25,8 @@
 }
 .container .card .box .icon{
   position: absolute;
-  width: 140px;
-  height: 140px;
+  width: 118px;
+  height: 118px;
   background: var(--clr);
   border-bottom-right-radius: 50%;
   transition: 0.5%;
@@ -71,7 +71,7 @@
 .container .card .box .content {
 
   position: absolute;
-  top: 110px;
+  top: 112px;
   padding: 20px;
   text-align: center;
 }
@@ -86,7 +86,7 @@
   color: #fff;
   font-size: 0.95em;
   opacity: 0.75;
-  margin: 0 0 18px;
+  margin: 10px 0 18px;
 }
 .container .card .box .content a{
   background: var(--clr);
