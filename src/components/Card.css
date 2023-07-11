@@ -31,6 +31,18 @@
   border-bottom-right-radius: 50%;
   transition: 0.5%;
 }
+.btn{
+  border: 10px;
+  background-color: transparent;
+  font-size: 1.8rem;
+  color: var(--text-muted);
+}
+.btn:hover{
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 2rem;
+  color: var(--variable);
+}
 .container .card:hover .box .icon{
   /* width: 100%; */
 }
