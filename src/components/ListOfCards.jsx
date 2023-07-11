@@ -1,6 +1,9 @@
-import { cards } from '../mooks/cards'
 import { Crad } from './Crad'
+import { CardContext } from '../context/cardContext'
+import { useCrads } from '../hooks/useCrads'
+
 export const ListOfCards = () => {
+  const { cards } = useCrads(CardContext)
   return (
     <>
     {/* <Crad2/> */}
