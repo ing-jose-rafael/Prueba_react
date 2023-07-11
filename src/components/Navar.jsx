@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { MenuData } from '../helpers/menuData'
 import './NavbarStyles.css'
 export const Navbar = () => {
@@ -16,7 +17,7 @@ export const Navbar = () => {
           MenuData.map((item, index) => {
             return (
               <li key={index}>
-                <a href={item.link} className={item.cName}><i className={item.icon}></i>{item.title}</a>
+                <Link to={item.link} className={item.cName}><i className={item.icon}></i>{item.title}</Link>
               </li>
             )
           })
