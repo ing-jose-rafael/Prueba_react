@@ -12,7 +12,7 @@ export function Crad ({ card, viewMore = false }) {
 
   const text = viewMore ? 'Regesar...' : 'Ver más...'
   const path = viewMore ? '/' : `/cards/${card.id}`
-  const cardColor = isFavorite ? '#ff1f6b' : '#98ff21'
+  const cardColor = isFavorite ? '#ff1f6b' : '#45f3ff'
   const cardIconClass = isFavorite ? 'fa-solid fa-heart' : 'fa-regular fa-heart'
 
   const handleFav = () => {

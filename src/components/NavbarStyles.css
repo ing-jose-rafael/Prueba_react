@@ -43,11 +43,11 @@
   padding-right: 10px;
 }
 .nav-links:hover  {
-  background: var(--selection);
+  background: #45f3ff;
   text-decoration: none;
   border-radius: 30px;
   transition: all 0.2s ease-in-out;
-  color: var(--text-bright);
+  color: #333;
 }
 .navbar .toggle {
   display: none;
