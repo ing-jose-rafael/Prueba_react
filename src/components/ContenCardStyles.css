@@ -1,0 +1,203 @@
+.b-card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background:var(--background-body);
+}
+.content-card {
+  position: relative;
+  width: 320px;
+  height: 430px;
+  background:var(--background-body);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.content-card .box{
+  position: relative;
+  width: 110%;
+  height: 200px;
+  /* background: #f09; */
+  border-radius: 15px;
+}
+.content-card .box:nth-child(1)::before{
+  content: '';
+  position: absolute;
+  top: 96px;
+  left: -1px;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  z-index: 10;
+  border-bottom-left-radius: 13px;
+  box-shadow: -6px 6px var(--background-body);
+}
+.content-card .box:nth-child(1)::after{
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 105px;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  z-index: 10;
+  border-bottom-left-radius: 20px;
+  box-shadow: -6px 6px var(--background-body);
+}
+.content-card .box:nth-child(2){
+  background: #fff;
+  height: 220px;
+  width: 100%;
+}
+.content-card .box:nth-child(2)::before{
+  content: '';
+  position: absolute;
+  bottom: 95px;
+  left: 0px;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  z-index: 10;
+  border-top-left-radius: 14px;
+  box-shadow: -6px -6px var(--background-body);
+}
+.content-card .box:nth-child(2)::after{
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 108px;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  z-index: 10;
+  border-top-left-radius: 14px;
+  box-shadow: -6px -6px var(--background-body);
+}
+.content-card .circle{
+  position: absolute;
+  top: 50%;
+  left: -91px;
+  transform: translateY(-50%);
+  width: 180px;
+  height: 180px;
+  background: #fff;
+  border-radius: 50%;
+  border: 10px solid var(--background-body);
+}
+.content-card .box .imgBx,
+.content-card .circle .imgBx{
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.content-card .box .imgBx video,
+.content-card .circle .imgBx img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.content-card .box .imgBx{
+  border-radius: 15px;
+}
+.content-card .box .content {
+  position: absolute;
+  /* color: #383838; */
+  inset: 0;
+  padding:30px 10px 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.content-card .box .content h2{
+  margin: 0 0 10px;
+  /* width: 100%; */
+  padding-left: 136px;
+  text-transform: uppercase;
+  font-size: 1.15em;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  line-height: 1.1em;
+  color: #333;
+}
+.content-card .box .content h2 span{
+  font-size: 0.75em;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: #e91e63;
+  text-transform: initial;
+}
+.content-card .box .content ul{
+  margin: 0;
+  position: relative;
+  top: 10px;
+  display: flex;
+  grid-template-columns: repeat(3,1fr);
+  width: 100%;
+  padding: 0 10px;
+  justify-content: space-evenly;
+}
+.content-card .box .content ul li{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 10px;
+  font-size: 0.85em;
+  font-weight: 500;
+  color: #999;
+}
+.content-card .box .content ul li:not(:last-child){
+  border-right: 1px solid #ccc;
+}
+.content-card .box .content ul li span{
+  font-size: 1.65em;
+  color: #333;
+}
+.content-card .box .content button {
+  position: relative;
+  top: 10px;
+  padding: 8px 10px;
+  outline: none;
+  background: #45f3ff;
+  border-radius: 30px;
+  color:var(--background-body);
+  font-size: 1em;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+  border: 5px solid var(--background-body);
+  box-shadow: 0 0 0 10px #fff;
+  transition: 0.5s;
+}
+.content-card .box .content button:hover{
+  background: #ff3d7f;
+  letter-spacing: 0.5em;
+}
+.content-card .box .content button::before {
+  content: '';
+  position: absolute;
+  top: 16px;
+  left: -32px;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border-top-right-radius: 20px;
+  box-shadow: 5px -7px #fff;
+}
+.content-card .box .content button::after {
+  content: '';
+  position: absolute;
+  top: 16px;
+  right: -32px;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border-top-left-radius: 20px;
+  box-shadow: -5px -7px #fff;
+}
