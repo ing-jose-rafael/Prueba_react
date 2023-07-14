@@ -1,0 +1,172 @@
+.listDeport{
+  width: 100%;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  padding: 0 30px 0;
+}
+.listDeport .listDeportUl{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  gap: 10rem;
+}
+.container {
+  position: relative;
+  display: flex;
+  padding: 80px 40px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 80px;
+}
+.cardDeport{
+  position: relative;
+  width: 350px;
+  height: 180px;
+  background: #333;
+  transition: 0.5%;
+}
+.cardDeport:hover {
+  height: 400px;
+}
+.lines{
+  position: absolute;
+  inset: 0;
+  background: #000;
+  overflow: hidden;
+}
+.cardDeport .lines::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 120px;
+  background: linear-gradient(transparent, #45f3ff,#45f3ff,#45f3ff,transparent);
+  animation: animate 4s linear infinite;
+  animation-play-state: paused;
+}
+.cardDeport:hover .lines::before{
+  animation-play-state: running;
+}
+@keyframes animate{
+  0% {
+    transform: translate(-50%,-50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%,-50%) rotate(360deg);
+  }
+}
+.cardDeport .lines::after{
+  content: '';
+  position: absolute;
+  inset: 3px;
+  background: #292929;
+}
+.cardDeport .imgBx {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  transform: translateX(-50%);
+  background: #000;
+  transition: 0.5s;
+  z-index: 10;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardDeport:hover .imgBx{
+  top: 20px;
+  width: 180px;
+  height: 180px;
+}
+
+.cardDeport .imgBx::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 150px;
+  background: linear-gradient(transparent, #ff3c7b,#ff3c7b,#ff3c7b,transparent);
+  animation: animate2 4s linear infinite;
+  animation-play-state: paused;
+}
+
+@keyframes animate2{
+  0% {
+    transform: translate(-50%,-50%) rotate(360deg);
+  }
+  100% {
+    transform: translate(-50%,-50%) rotate(0deg);
+  }
+}
+.cardDeport:hover .imgBx::before{
+  animation-play-state: running;
+}
+.cardDeport .imgBx::after{
+  content: '';
+  position: absolute;
+  inset: 3px;
+  background: #292929;
+}
+.cardDeport .imgBx img{
+  position: absolute;
+  width: 100px;
+  z-index: 1;
+  /* filter: invert(1); */
+  opacity: 0.5;
+  transition: 0.5s;
+}
+.cardDeport:hover .imgBx img{
+  opacity: 1;
+}
+.cardDeport .content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+}
+.cardDeport .content .details{
+  padding: 30px 20px;
+  text-align: center;
+  width: 100%;
+  transition: 0.5s;
+  transform: translateY(145px);
+}
+.cardDeport:hover .content .details{
+  transform: translateY(0px);
+}
+.cardDeport .content .details h2{
+  font-size: 1.5em;
+  font-weight: 500;
+  color: #45f3ff;
+  line-height: 1.2em;
+}
+.cardDeport .content .details p{
+  color: #fff;
+  opacity: 0;
+  transition: 0.5s;
+}
+.cardDeport .content .details a{
+  display: inline-block;
+  padding: 8px 15px;
+  background: #45f3ff;
+  color: #292929;
+  margin-top: 10px;
+  font-weight: 500;
+  text-decoration: none;
+  opacity: 0;
+  transition: 0.5s;
+}
+.cardDeport:hover .content .details p,
+.cardDeport:hover .content .details a{
+  opacity: 1;
+}
