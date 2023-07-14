@@ -1,19 +1,19 @@
 export const MenuData = [
   {
-    title: 'Home',
+    title: 'Overview',
     link: '/',
     cName: 'nav-links',
     icon: 'fas fa-house-user'
   },
   {
-    title: 'Projects',
-    link: '/projects',
+    title: 'Content',
+    link: '/CONTENT',
     cName: 'nav-links',
     icon: 'fas fa-briefcase'
   },
   {
-    title: 'About',
-    link: '/about',
+    title: 'Create',
+    link: '/create',
     cName: 'nav-links',
     icon: 'fas fa-info-circle'
   }
