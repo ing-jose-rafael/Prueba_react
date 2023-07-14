@@ -3,6 +3,7 @@ import App from '../App'
 import { ListOfCards } from '../components/ListOfCards'
 import { Detail } from '../components/Detail'
 import { ContentsDeport } from '../components/Content'
+import { Create } from '../components/Create'
 
 export const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ export const router = createBrowserRouter([
       {
         path: '/CONTENT',
         element: <ContentsDeport/>
+      },
+      {
+        path: '/create',
+        element: <Create/>
       }
     ]
   }
