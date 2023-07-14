@@ -1,0 +1,145 @@
+.create{
+  width: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* gap: 30px; */
+  /* background: #fff; */
+}
+.create div{
+  /* width: 100%; */
+  /* width: 250px; */
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  /* background: #ad3232; */
+}
+.create form {
+  /* width: 250px; */
+  /* background: rgb(44, 81, 118); */
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.create .inputSelect {
+  color: var(--text-main);
+  gap: 1em;
+  align-items: center;
+}
+.create .inputSelect select{
+  width: 156px;
+}
+.create .inputBox {
+  position: relative;
+  width: 250px;
+  /* background: rgb(39, 28, 104); */
+}
+.create .inputBox input{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: var(--background-body);
+  border-radius: 5px;
+  outline: none;
+  color: #fff;
+  font-size: 1em;
+  transition: 0.5s;
+}
+.create .inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 10px;
+  pointer-events: none;
+  font-size: 1em;
+  color: rgba(255, 255, 255, 0.25);
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+.create .inputBox input:valid ~ span,
+.create .inputBox input:focus ~ span {
+  color: #00dfc4;
+  transform: translateX(10px) translateY(-7px);
+  font-size: 0.65em;
+  padding: 0 10px;
+  background: var(--background-body);
+  border-left: 1px solid #00dfc4;
+  border-right: 1px solid #00dfc4;
+  letter-spacing: 0.2em;
+}
+.create .inputBox:nth-child(2) input:valid ~ span,
+.create .inputBox:nth-child(2) input:focus ~ span {
+  background: #00dfc4;
+  color: var(--background-body);
+  border-radius: 2px;
+}
+
+.create .inputBox input:valid,
+.create .inputBox input:focus {
+  border: 1px solid #00dfc4;
+}
+
+.create form .btn1 {
+  position: relative;
+  background: #fff;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+  padding: 10px 30px;
+  transition: 0.5s;
+}
+.create form button:hover {
+  letter-spacing: 0.25em;
+  background: #00dfc4;
+  color: #00dfc4;
+  box-shadow: 0 0 35px #00dfc4;
+}
+.create form button:before{
+  content: '';
+  position: absolute;
+  inset: 2px;
+  background: var(--background-body);
+}
+.create form button span{
+  position: relative;
+  z-index: 1;
+
+}
+.create form button i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+.create form button i::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 80%;
+  width: 10px;
+  height: 4px;
+  background: var(--background-body);
+  transform: translateX(50%) skewX(325deg);
+  transition: 0.5s;
+}
+.create form button:hover i::before {
+  width: 20px;
+  left: 20%;
+}
+.create form button i::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  width: 10px;
+  height: 4px;
+  background: var(--background-body);
+  transform: translateX(50%) skewX(325deg);
+  transition: 0.5s;
+}
+.create form button:hover i::after {
+  width: 20px;
+  left: 80%;
+}
