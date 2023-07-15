@@ -3,26 +3,34 @@ import { category } from '../mooks/deports'
 import { ContenCard } from './ContenCard'
 import './ContentStyle.css'
 import { useDeports } from '../hooks/useDeports'
-
+/**
+ * Componente para mostrar contenido deportivo.
+ */
 export const ContentsDeport = () => {
-  const { deports } = useDeports()
-  // const [deports] = useState(initialDeports)
-  const [filter, setFilter] = useState(-1)
+  const { deports } = useDeports() // Aplica el hook 'useDeports' y obtiene la variable 'deports' del resultado
+  const [filter, setFilter] = useState(-1) // Declara un estado 'filter' inicializado con -1 y una función 'setFilter' para actualizarlo
 
   const filterDeport = (deports) => {
-    return deports.filter(item => item.categoriId === filter || filter === -1)
+    return deports.filter(item => item.categoriId === filter || filter === -1) // Filtra los deportes según la categoría seleccionada en 'filter'
   }
-
+  /**
+   * Obtiene la categoría correspondiente a partir de su ID.
+   * @param {number} id - ID de la categoría.
+   * @returns {Object} - Objeto de categoría correspondiente al ID.
+   */
   const getIconCategory = (id) => {
-    return category.find(item => item.id === id)
+    return category.find(item => item.id === id) // Busca la categoría en 'category' que coincida con el id proporcionado
   }
 
-  const filtredDeport = filterDeport(deports)
+  const filtredDeport = filterDeport(deports) // Aplica la función 'filterDeport' a la lista de deportes 'deports'
 
+  /**
+   * Maneja el cambio de categoría seleccionada.
+   * @param {Object} e - Evento de cambio.
+   */
   const handleChangeCategory = (e) => {
-    const value = e.target.value
-    setFilter(+value)
-    // filterDeport()
+    const value = e.target.value // Obtiene el valor seleccionado del evento
+    setFilter(+value) // Actualiza el estado 'filter' con el valor seleccionado convertido a número
   }
   return (
     <>

@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom'
 import { Navbar } from './components/Navar'
 import { DeportProvider } from './context/deportsContext'
 import { CardProvider } from './context/cardContext'
+import { Footer } from './components/Footer'
 
 function App () {
   return (
@@ -16,6 +17,9 @@ function App () {
           <Outlet/>
         </main>
       </DeportProvider>
+      <footer>
+        <Footer/>
+      </footer>
     </div>
     </CardProvider>
   )

@@ -5,11 +5,12 @@ import { Detail } from '../components/Detail'
 import { ContentsDeport } from '../components/Content'
 import { Create } from '../components/Create'
 
+// Creación del enrutador de navegación utilizando `createBrowserRouter`
 export const router = createBrowserRouter([
   {
-    path: '/',
-    element: <App />,
-    children: [
+    path: '/', // 👈 Ruta principal
+    element: <App />, // Componente asociado a la ruta principal
+    children: [ // Ruta secundaria
       {
         path: '/',
         element: <ListOfCards/>

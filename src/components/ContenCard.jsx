@@ -1,9 +1,13 @@
 import './ContenCardStyles.css'
-
+/**
+ * Componente de tarjeta de contenido.
+ *
+ * Props:
+ * - item: Objeto que representa el contenido de la tarjeta.
+ * - category: Objeto que representa la categoría del contenido.
+ */
 export const ContenCard = ({ item, category }) => {
   return (
-  // <div className="b-card">
-
    <div className="content-card">
     <div className="box">
     <div className="imgBx">
@@ -24,10 +28,7 @@ export const ContenCard = ({ item, category }) => {
                 </li>
               )
             })
-            }
-          {/* <li>Posts<span>62</span></li>
-          <li>Posts<span>120</span></li>
-          <li>Posts<span>62</span></li> */}
+          }
         </ul>
         <button>Follow</button>
       </div>
@@ -38,6 +39,5 @@ export const ContenCard = ({ item, category }) => {
       </div>
     </div>
    </div>
-  // </div>
   )
 }

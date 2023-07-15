@@ -1,116 +1,112 @@
 .container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 80px;
+  justify-content: center; /* alinea los elementos horizontalmente en el centro del contenedor.*/
+  align-items: center; /*  alinea los elementos verticalmente en el centro del contenedor.*/
+  flex-wrap: wrap; /* permite que los elementos se envuelvan cuando el espacio no es suficiente.*/
+  gap: 80px; /* establece un espacio de 80 píxeles entre los elementos hijos.*/
   
 }
 .container .card {
-  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
-  position: relative;
-  width: 250px;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1); /* aplica una sombra alrededor del elemento.*/
+  position: relative;  /* Establece la posición relativa del elemento */
+  width: 250px;  /* Establece el ancho del elemento en 250 píxeles */
   height: 350px;
   /* background-color: rgb(101, 183, 241); */
-  background-color: var(--clr);
-  border-radius: 20px;
-  border-top-left-radius: 70px;
-  overflow: hidden;
+  background-color: var(--clr); /* Establece el color de fondo del elemento utilizando una variable CSS personalizada */
+  border-radius: 20px; /* Establece el radio de las esquinas del elemento en 20 píxeles */
+  border-top-left-radius: 70px; /* Establece el radio de la esquina superior izquierda del elemento en 70 píxeles */
+  overflow: hidden; /* Oculta cualquier contenido que se desborde del elemento */
 }
 .container .card .box {
-  position: absolute;
-  inset: 5px;
-  background: var(--background); /* cambiar el color al de la pagina*/
-  border-radius: 10px;
+  position: absolute; /* Establece la posición absoluta del elemento */
+  inset: 5px; /* Establece los desplazamientos de los bordes superior, derecho, inferior e izquierdo en 5 píxeles */
+  background: var(--background); /* Establece el color de fondo del elemento utilizando una variable CSS personalizada */
+  border-radius: 10px; /* Establece el radio de las esquinas del elemento en 10 píxeles */
 }
 .container .card .box .icon{
-  position: absolute;
-  width: 118px;
-  height: 118px;
-  background: var(--clr);
-  border-bottom-right-radius: 50%;
-  transition: 0.5%;
+  position: absolute; /* Establece la posición absoluta del elemento */
+  width: 118px; /* Establece el ancho del elemento en 118 píxeles */
+  height: 118px; /* Establece la altura del elemento en 118 píxeles */
+  background: var(--clr); /* Establece el color de fondo del elemento utilizando una variable CSS personalizada */
+  border-bottom-right-radius: 50%;/* Establece el radio de la esquina inferior derecha del elemento en 50% */
+  transition: 0.5%; /* Establece una transición de 0.5 segundos para las propiedades animadas del elemento */
 }
 .btn{
-  border: 10px;
-  background-color: transparent;
-  font-size: 1.8rem;
-  color: var(--text-muted);
+  border: 10px; /* Establece un borde de 10 píxeles */
+  background-color: transparent; /* Establece el color de fondo del elemento como transparente */
+  font-size: 1.8rem; /* Establece el tamaño de fuente del elemento en 1.8 rem */
+  color: var(--text-muted); /* Establece el color del texto utilizando una variable CSS personalizada */
 }
 .btn:hover{
-  cursor: pointer;
-  background-color: transparent;
-  font-size: 2rem;
-  color: var(--variable);
-}
-.container .card:hover .box .icon{
-  /* width: 100%; */
+  cursor: pointer; /* Cambia el cursor del mouse a una mano */
+  background-color: transparent; /* Establece el color de fondo del elemento como transparente */
+  font-size: 2rem; /* Aumenta el tamaño de fuente del elemento a 2 rem */
+  color: var(--variable); /* Establece el color del texto utilizando una variable CSS personalizada */
 }
 .container .card .box .icon::before{
-  content: '';
-  position: absolute;
-  bottom: -30px;
-  left: 0;
-  width: 30px;
-  height: 30px;
-  background: transparent;
-  border-top-left-radius: 30px;
-  box-shadow: -5px -5px 0 5px var(--clr);
+  content: ''; /* Agrega contenido antes del elemento */
+  position: absolute; /* Establece la posición absoluta del elemento */
+  bottom: -30px; /* Desplaza el elemento hacia abajo 30 píxeles desde la posición inferior */
+  left: 0; /* Establece la posición del elemento en el borde izquierdo */
+  width: 30px; /* Establece el ancho del elemento en 30 píxeles */
+  height: 30px; /* Establece la altura del elemento en 30 píxeles */
+  background: transparent; /* Establece el color de fondo del elemento como transparente */
+  border-top-left-radius: 30px; /* Establece el radio de la esquina superior izquierda del elemento en 30 píxeles */
+  box-shadow: -5px -5px 0 5px var(--clr); /* Agrega una sombra al elemento */
 }
 .container .card .box .icon::after{
-  content: '';
-  position: absolute;
-  top: 0px;
-  right: -30px;
-  width: 30px;
-  height: 30px;
-  background:transparent;
-  border-top-left-radius: 16px;
-  box-shadow: -5px -5px 0 1px var(--clr);
+  content: ''; /* Agrega contenido después del elemento */
+  position: absolute; /* Establece la posición absoluta del elemento */
+  top: 0px; /* Establece la posición del elemento en el borde superior */
+  right: -30px; /* Desplaza el elemento hacia la derecha 30 píxeles desde la posición derecha */
+  width: 30px; /* Establece el ancho del elemento en 30 píxeles */
+  height: 30px; /* Establece la altura del elemento en 30 píxeles */
+  background:transparent; /* Establece el color de fondo del elemento como transparente */
+  border-top-left-radius: 16px; /* Establece el radio de la esquina superior izquierda del elemento en 16 píxeles */
+  box-shadow: -5px -5px 0 1px var(--clr); /* Agrega una sombra al elemento */
 }
 .container .card .box .icon .iconBox{
-  padding: 30px;
-  position: absolute;
-  inset: 5px;
-  background: var(--background);
-  border-radius: 50%;
-  border-top-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 30px; /* Agrega un relleno interno de 30 píxeles al elemento */
+  position: absolute; /* Establece la posición absoluta del elemento */
+  inset: 5px; /* Establece los desplazamientos de los bordes superior, derecho, inferior e izquierdo en 5 píxeles */
+  background: var(--background); /* Establece el color de fondo del elemento utilizando una variable CSS personalizada */
+  border-radius: 50%; /* Establece el radio de las esquinas del elemento en 50% */
+  border-top-right-radius: 10px; /* Establece el radio de la esquina superior derecha del elemento en 10 píxeles */
+  border-bottom-left-radius: 10px; /* Establece el radio de la esquina inferior izquierda del elemento en 10 píxeles */
+  display: flex; /* Muestra los elementos en forma de flexbox */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center; /* Centra los elementos verticalmente */
 }
 .container .card .box .content {
-
-  position: absolute;
-  top: 112px;
-  padding: 20px;
-  text-align: center;
+  position: absolute; /* Establece la posición absoluta del elemento */
+  top: 112px; /* Desplaza el elemento hacia abajo 112 píxeles desde la posición superior */
+  padding: 20px; /* Agrega un relleno interno de 20 píxeles al elemento */
+  text-align: center; /* Centra el texto horizontalmente en el elemento */
 }
 .container .card .box .content h3{
-  color: #fff;
-  font-size: 1.35em;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
+  color: #fff; /* Establece el color del texto en blanco */
+  font-size: 1.35em; /* Establece el tamaño de fuente del elemento en 1.35em */
+  font-weight: 700; /* Establece el peso de fuente del elemento en 700 */
+  text-transform: uppercase; /* Convierte el texto en mayúsculas */
+  letter-spacing: 0.12em; /* Establece el espaciado entre letras en 0.12em */
 }
 .container .card .box .content p{
-  color: #fff;
-  font-size: 0.95em;
-  opacity: 0.75;
-  margin: 10px 0 18px;
+  color: #fff; /* Establece el color del texto en blanco */
+  font-size: 0.95em; /* Establece el tamaño de fuente del elemento en 0.95em */
+  opacity: 0.75; /* Establece la opacidad del elemento en 0.75 */
+  margin: 10px 0 18px; /* Establece los márgenes superior e inferior del elemento */
 }
 .container .card .box .content a{
-  background: var(--clr);
-  display: inline-block;
-  padding: 10px 25px;
-  text-decoration: none;
-  color: #333;
-  text-transform: uppercase;
-  font-weight: 600;
-  border-radius: 30px;
-  transition: 0.5s;
+  background: var(--clr); /* Establece el color de fondo del elemento utilizando una variable CSS personalizada */
+  display: inline-block; /* Muestra el elemento como bloque en línea */
+  padding: 10px 25px; /* Agrega un relleno interno de 10 píxeles en el eje vertical y 25 píxeles en el eje horizontal */
+  text-decoration: none; /* Elimina la decoración de subrayado del texto */
+  color: #333; /* Establece el color del texto */
+  text-transform: uppercase; /* Convierte el texto en mayúsculas */
+  font-weight: 600; /* Establece el peso de fuente del elemento en 600 */
+  border-radius: 30px; /* Establece el radio de las esquinas del elemento en 30 píxeles */
+  transition: 0.5s; /* Establece una transición de 0.5 segundos para las propiedades animadas del elemento */
 }
 .container .card .box .content a:hover{
-  letter-spacing: 0.2em;
+  letter-spacing: 0.2em; /* Aumenta el espaciado entre letras a 0.2em al pasar el cursor sobre el elemento */
 }
