@@ -1,14 +1,13 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Card.css'
-import { CardContext } from '../context/cardContext'
 import { useCrads } from '../hooks/useCrads'
 // import { favorite } from '../helpers/getDetailCard'
 
 // #249eff #ff1f6b
 export function Crad ({ card, viewMore = false }) {
   const [isFavorite, setIsFavorite] = useState(card.favore)
-  const { addToggleFavorited } = useCrads(CardContext)
+  const { addToggleFavorited } = useCrads()
 
   const text = viewMore ? 'Regesar...' : 'Ver más...'
   const path = viewMore ? '/' : `/cards/${card.id}`

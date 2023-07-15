@@ -1,10 +1,12 @@
 import { useState } from 'react'
-import { category, deport as initialDeports } from '../mooks/deports'
+import { category } from '../mooks/deports'
 import { ContenCard } from './ContenCard'
 import './ContentStyle.css'
+import { useDeports } from '../hooks/useDeports'
 
 export const ContentsDeport = () => {
-  const [deports] = useState(initialDeports)
+  const { deports } = useDeports()
+  // const [deports] = useState(initialDeports)
   const [filter, setFilter] = useState(-1)
 
   const filterDeport = (deports) => {
@@ -79,9 +81,9 @@ export const ContentsDeport = () => {
 
         <ul className='listDeportUl'>
         {
-          filtredDeport.map(item => {
+          filtredDeport.map((item, index) => {
             const category = getIconCategory(item.categoriId)
-            return (<li key={item.id}><ContenCard item={item} category={category} /></li>)
+            return (<li key={item.id + item.categoriId + item.name}><ContenCard item={item} category={category} /></li>)
           }
           )
         }
