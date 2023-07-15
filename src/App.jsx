@@ -1,6 +1,7 @@
 import './App.css'
 import { Outlet } from 'react-router-dom'
 import { Navbar } from './components/Navar'
+import { DeportProvider } from './context/deportsContext'
 import { CardProvider } from './context/cardContext'
 
 function App () {
@@ -10,9 +11,11 @@ function App () {
       <header>
         <Navbar/>
       </header>
-      <main>
-        <Outlet/>
-      </main>
+      <DeportProvider>
+        <main>
+          <Outlet/>
+        </main>
+      </DeportProvider>
     </div>
     </CardProvider>
   )
